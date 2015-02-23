@@ -5,9 +5,9 @@ import java.awt.Graphics2D;
 public class Ball extends Sprite{
 	int r;
 	int R;
-	final static double VMAX = 5;
-	final static double VMAX2 = 25;
-	final static double XMAX = 4;
+	final static double VMAX = 6;
+	final static double VMAX2 = VMAX*VMAX;
+	final static double XMAX = VMAX - 1;
 	double vx;
 	double vy;
 	
