@@ -33,7 +33,7 @@ public class MainFrame extends JPanel
 	}
 	
 	public void init(){
-		ball = new Ball(150, 200);
+		ball = new Ball(50, 200);
 		block = new Block[12];
 		for(int i=0; i<3; i++){
 			for(int j=0; j<4; j++){
@@ -57,8 +57,11 @@ public class MainFrame extends JPanel
 		}
 		bar.update();
 		int check = bar.collision(ball);
-		if(check == 0 || check == 2) ball.changeV(false);
-		else if(check != -1) ball.changeV(true);
+		if(check != -1){
+			ball.changeV(false);
+			ball.setYon(400);
+		}
+//		else if(check != -1) ball.changeV(true);
 		
 		if(!ball.isExist()) anime = false;
 	}

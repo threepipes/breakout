@@ -42,7 +42,7 @@ public class Rect extends Sprite{
 		py[3] = y + height;
 		for(int i=0; i<4; i++){
 			double dist = (b.x-px[i])*(b.x-px[i]) + (b.y-py[i])*(b.y-py[i]);
-			if(dist < b.r*b.r) return i;
+//			if(dist < b.r*b.r) return i;
 			double pqx = px[(i+1)%4] - px[i];
 			double pqy = py[(i+1)%4] - py[i];
 			double pmx = b.x - px[i];

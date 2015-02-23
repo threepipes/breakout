@@ -5,7 +5,7 @@ import java.awt.Graphics2D;
 public class Ball extends Sprite{
 	int r;
 	int R;
-	final static double VMAX = 6;
+	final static double VMAX = 7;
 	final static double VMAX2 = VMAX*VMAX;
 	final static double XMAX = VMAX - 1;
 	double vx;
@@ -15,7 +15,7 @@ public class Ball extends Sprite{
 		super(x, y);
 		this.r = 10;
 		this.R = r*2;
-		vx = 2;
+		vx = 3;
 		vy = Math.sqrt(VMAX2-vx*vx);
 	}
 	
@@ -56,6 +56,10 @@ public class Ball extends Sprite{
 	
 	public void delete(){
 		isExist = false;
+	}
+	
+	public void setYon(double y){
+		this.y = y-r;
 	}
 	
 //	private boolean checkWall(){
